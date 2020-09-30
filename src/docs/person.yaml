@@ -1,0 +1,39 @@
+paths:
+  /name-count:
+    get:
+      tags:
+        - "person"
+      summary:  GET name and count property
+      parameters:
+        - $ref: "#/components/parameters/name"
+      responses:
+        "200":
+          description: Return a person object
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Person"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+# SECTION: COMPONENTS
+components:
+  parameters:
+    name:
+      required: true
+      name: name
+      in: query
+      schema:
+        type: string
+  # RESPONSE TYPES
+  responses:
+    BadRequest:
+      description: Required parameters are not provided.
+  # SECTION MODELS
+  schemas:
+    Person:
+      type: object
+      properties:
+        name:
+          type: string
+        count:
+          type: number
