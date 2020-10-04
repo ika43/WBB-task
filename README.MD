@@ -1,5 +1,9 @@
 # WBB Task
 
+PART I: Parsing files (first-names.txt and oliver-twist.txt) from data folder.
+And count number of times that first names appear in oliwer-twist.txt (src/utils/file-parser.js)
+PART II: Simple express API for retrieving counted names with given parameters.
+
 ---
 
 ## Setup
